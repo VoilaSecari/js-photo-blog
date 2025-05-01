@@ -1,0 +1,81 @@
+/* BASELINE */
+
+* {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  background-image: url(./IMG/cork.png);
+}
+
+header {
+  background-color: rgb(228, 228, 228);
+}
+
+header h1 {
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  font-size: 50pt;
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-weight: 600;
+}
+
+.card p {
+  font-family: "Edu TAS Beginner", sans-serif;
+  font-weight: 400;
+  color: gray;
+
+  padding-top: 0.5rem;
+}
+
+.card {
+  position: relative;
+}
+
+.card-pin {
+  position: absolute;
+  right: 45%;
+  top: -15px;
+}
+
+/* S UNTIL 600PX */
+
+@media screen and (max-width: 7200px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 3rem;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    /* debug */
+  }
+
+  .card {
+    padding: 1rem;
+    background-color: white;
+
+    width: 300px;
+  }
+}
+
+/* M UNTIL 720px */
+@media screen and (min-width: 720px) {
+}
+
+/* L UNTIL 1200PX */
+
+@media screen and (min-width: 1200px) {
+}
