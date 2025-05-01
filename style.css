@@ -37,12 +37,20 @@ header h1 {
 
 .card {
   position: relative;
+  box-shadow: 10px 10px 20px rgb(91, 67, 60);
 }
 
 .card-pin {
   position: absolute;
   right: 45%;
   top: -15px;
+}
+
+/* HOVER */
+.card:hover {
+  cursor: pointer;
+
+  transform: rotate(9deg);
 }
 
 /* S UNTIL 600PX */
