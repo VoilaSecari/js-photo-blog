@@ -42,8 +42,15 @@ header h1 {
 
 .card-pin {
   position: absolute;
-  right: 45%;
-  top: -15px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  /* top: -15px; */
+}
+
+#card-date-text {
+  color: rgb(203, 203, 203);
+  font-size: smaller;
+  font-family: "Courier New", Courier, monospace;
 }
 
 /* HOVER */
@@ -51,6 +58,19 @@ header h1 {
   cursor: pointer;
 
   transform: rotate(9deg);
+}
+
+/* DISPLAY NONE */
+
+.d-none {
+  display: none;
+}
+
+/* OVERLAY */
+
+.d-overlay {
+  display: block;
+  /* z-index: 1000; */
 }
 
 /* S UNTIL 600PX */
