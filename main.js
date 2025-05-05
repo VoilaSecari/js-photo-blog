@@ -38,13 +38,38 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/").then((response) => {
   });
 
   postsContainerEl.innerHTML += cardHTML;
+
+  // ora prendo tutte le card per creare un nodo dom
+  const postsNodes = document.querySelectorAll(".card");
+
+  //costanti per l'overlay
+  const overlayEl = document.getElementById("overlay");
+  const overlayImg = document.getElementById("overlay-img");
+  // tengo traccia degli id clickati
+  postsNodes.forEach((postNode) => {
+    postNode.addEventListener("click", () => {
+      const imgEl = postNode.querySelector(".card-content img");
+      if (imgEl) {
+        overlayImg.src = imgEl.src;
+        overlayEl.classList.remove("d-none");
+        overlayEl.classList.add("d-overlay");
+      }
+    });
+  });
+
+  //per chiudere l'overlay
+  overlayEl.addEventListener("click", () => {
+    overlayEl.classList.remove("d-overlay");
+    overlayEl.classList.add("d-none");
+    overlayImg.src = "";
+  });
 });
 
 // FUNZIONE ---> sostituzione dati post in HTML
 
 const generatePostCard = (post) => {
   const cardHTML = `
-  <div class="card">
+  <div class="card" id="card-${post.id}">
           <img src="./IMG/pin.svg" alt="Pin" class="card-pin" />
           <div class="card-content">
             <img src="${post.url}" alt="${post.title}" />
